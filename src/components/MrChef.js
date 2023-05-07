@@ -11,6 +11,7 @@ function About(props) {
                     <h5 class="card-title">Mr.Chef</h5>
                     <p class="card-text">This application is made for learning purpose only, it helps users to find the Recipes of their choice.</p>
                     <p class="card-text">This application is made by using REST apis and REACT JS, Let me know if you want to give me some feedback.</p>
+                    <a href="/https://github.com/sanket-164/Mr.Chef_ReactJS_RESTAPI" class={`btn btn-${theme === 'dark' ? 'light' : 'dark'} text-${theme}`}>Get Source Code</a>
                     <Link to="/" class={`btn btn-${theme === 'dark' ? 'light' : 'dark'} text-${theme}`}>Explore</Link>
                 </div>
             </div>
