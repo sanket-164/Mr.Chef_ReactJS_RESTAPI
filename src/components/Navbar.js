@@ -43,7 +43,7 @@ function Navbar(props) {
     <div id="navbar-top-sanket">
       <nav className={`navbar navbar-expand-lg bg-${theme} navbar-${theme}`}>
         <div className="container-fluid container">
-          <Link className="navbar-brand" to="/mrchef">
+          <Link className="navbar-brand" to="/">
             <img
               className="mx-2 mb-1"
               src="https://static.vecteezy.com/system/resources/previews/008/709/513/original/chef-restaurant-logo-illustrations-template-free-vector.jpg"
@@ -68,7 +68,7 @@ function Navbar(props) {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/">
+                <Link className="nav-link active" aria-current="page" to="/home">
                   Home
                 </Link>
               </li>
