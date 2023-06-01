@@ -1,44 +1,43 @@
-# Here you can see the website copy this link
+# Mr. Chef - Recipe Web Application (<a href="https://sanket-mrchef.netlify.app/" target="__blank">**View**</a>)
+Welcome to Mr.Chef, a web application that brings you a wide variety of delicious recipes to explore and try in your kitchen. This README.md file serves as a guide to understanding Mr.Chef and its features.
 
-https://sanket-mrchef.netlify.app/
+# Features
+### Recipe Collection
+- Mr.Chef provides an extensive collection of recipes from various ingredient, categories and countries. From appetizers to desserts, you can find recipes for all occasions and preferences.
 
-## Getting Started with Create React App
+### Recipe Search
+- Easily search for recipes by category and country preferences. Find the perfect recipe that suits your taste and requirements.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Recipe Details
+- Each recipe page includes detailed instructions, ingredients list, cooking time, serving size information. Get all the information you need to prepare the dish successfully.
 
-## Available Scripts
+### Recipe Sharing
+- Share your favorite recipes with others through social media or by generating a unique URL. Spread the joy of cooking with friends and family.
 
-In the project directory, you can run:
+# Technologies Used
+### Front-end
+` HTML, CSS, JavaScript, React.js `
+### Back-end
+<a href="https://www.themealdb.com/api.php" target="__blank">`TheMealDB-API`</a>
+### User Interface
+` Bootstrap `
 
-### `npm start`
+# Setup and Installation
+### To set up Mr.Chef locally, follow these steps:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository from https://github.com/sanket-164/Mr.Chef_ReactJS_RESTAPI.git.
+2. Install the required dependencies by running npm install in the root directory.
+3. Run the application using npm start command.
+4. Access the application in your browser at `http://localhost:3000`.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Contributing
+- Contributions to Mr.Chef are welcome! If you find any issues or have suggestions for improvement, please open an issue on the GitHub repository.
 
-### `npm test`
+# Themes
+- ## Light Theme
+<img src="/src/Images/LightTheme.png">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- ## Dark Theme
+<img src="/src/Images/DarkTheme.png">
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+# Happy cooking with Mr.Chef!
