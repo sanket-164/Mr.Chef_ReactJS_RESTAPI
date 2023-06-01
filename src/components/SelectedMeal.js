@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useParams } from "react-router-dom";
 import Loader from "./Loader";
-import ShareImg from '../Images/share.png';
 
 function SelectedFood(props) {
   let { theme } = props;
@@ -18,7 +17,7 @@ function SelectedFood(props) {
     const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.id}`;
     const response = await fetch(url);
     const json = await response.json();
-    console.log(json.meals)
+    
     if (json.meals === null) {
       setLoading(false);
     } else {
@@ -44,6 +43,7 @@ function SelectedFood(props) {
 
   useEffect(() => {
     fetchItem();
+    // eslint-disable-next-line
   }, [location]);
 
   return (
@@ -70,7 +70,7 @@ function SelectedFood(props) {
           </div>
           <div className="d-flex justify-content-center my-2">
             <div
-              className={`card bg-${theme} border border-${theme === "dark" ? "light" : "dark"
+              className={`card bg-${theme} border mx-2 border-${theme === "dark" ? "light" : "dark"
                 }`}
               style={{ width: "50rem" }}
             >
@@ -81,7 +81,7 @@ function SelectedFood(props) {
               />
               <div className="row d-flex justify-content-center">
                 <div className="col-md-6 my-2">
-                  <ul className="list-group list-group-flush border border-dark my-2">
+                  <ul className="list-group list-group-flush border border-dark my-2 mx-4">
                     <li
                       className={`list-group-item border bg-${theme === "dark" ? "light" : "dark"
                         } border border-${theme === "dark" ? "light" : "dark"
@@ -271,18 +271,19 @@ function SelectedFood(props) {
                 </p>
               </div>
               <div className="d-flex justify-content-between">
-                <div className="w-100 ms-2">
+                <div className="w-100 ms-3">
                   <a
                     href={food.strYoutube}
                     target="_blank"
                     rel="noreferrer"
                     className={`btn btn-${theme === "dark" ? "light" : "dark"
-                      } mx-2 w-100 mt-3 btn-lg fs-4`}
+                      } w-100 btn-lg fs-4`}
                   >
                     Watch Video
                   </a>
                 </div>
-                <img src={ShareImg} alt="share" width={80} style={{ borderRadius: 60 }} className={`btn my-2 mx-2`} onClick={handleShare} ></img>
+                <p className={`btn btn-${theme === "dark" ? "light" : "dark"
+                      } btn-lg fs-4 ms-2 me-3`} onClick={handleShare}><i class="fa-solid fa-share"></i></p>
               </div>
             </div>
           </div>
