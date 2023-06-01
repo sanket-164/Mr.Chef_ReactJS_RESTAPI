@@ -11,11 +11,11 @@ function Navbar(props) {
   let ta = [];
 
   const GoToCategory = (category) => {
-    navigate("/filtered", { state: { category: category, area: "" } });
+    navigate(`/category/${category}`);
   };
 
   const GoToArea = (area) => {
-    navigate("/filtered", { state: { category: "", area: area } }); // must use "button" to redirect
+    navigate(`/country/${area}`); // must use "button" to redirect
   };
 
   const fetchAll = async () => {
@@ -37,7 +37,7 @@ function Navbar(props) {
   useEffect(() => {
     fetchAll();
     // eslint-disable-next-line
-  },[]);
+  }, []);
 
   return (
     <div id="navbar-top-sanket">
@@ -127,11 +127,11 @@ function Navbar(props) {
                   role="switch"
                   id="flexSwitchCheckDefault"
                   onClick={setTheme}
+                  checked={theme === "dark" ? true : false}
                 />
                 <label
-                  className={`form-check-label me-5 text-${
-                    theme === "dark" ? "light" : "dark"
-                  }`}
+                  className={`form-check-label me-5 text-${theme === "dark" ? "light" : "dark"
+                    }`}
                   htmlFor="flexSwitchCheckDefault"
                 >
                   Dark Mode

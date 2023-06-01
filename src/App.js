@@ -2,7 +2,7 @@ import './App.css';
 import Navbar from './components/Navbar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/Home';
-import SelectedFood from './components/SelectedFood'
+import SelectedMeal from './components/SelectedMeal'
 import Filter from './components/Filter';
 import { useState } from 'react';
 import MrChef from './components/MrChef';
@@ -35,8 +35,9 @@ function App() {
         <Routes>
           <Route exact path="/" element={<MrChef setTheme={themeToggle} theme={theme} />}></Route>
           <Route exact path="/home" element={<Home setTheme={themeToggle} theme={theme} />}></Route>
-          <Route exact path='/filtered' element={<Filter setTheme={themeToggle} theme={theme} />}></Route>
-          <Route exact path='/selectedFood' element={<SelectedFood setTheme={themeToggle} theme={theme} />}></Route>
+          <Route exact path='/category/:category' element={<Filter setTheme={themeToggle} theme={theme} />}></Route>
+          <Route exact path='/country/:country' element={<Filter setTheme={themeToggle} theme={theme} />}></Route>
+          <Route exact path='/meal/:id' element={<SelectedMeal setTheme={themeToggle} theme={theme} />}></Route>
         </Routes>
       </BrowserRouter>
     </>

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import FoodItem from './FoodItem';
+import MealItem from './MealItem';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import Loader from './Loader';
 import InfiniteLoader from './InfiniteLoader';
@@ -15,8 +15,6 @@ function Home(props) {
         for (let i = 0; i < 6; i++) {
             const response = await fetch(url);
             const json = await response.json();
-            // console.log(json.meals[0]);
-
             if (food.length < 6) {
                 food.push(json.meals[0]);
             } else {
@@ -41,7 +39,6 @@ function Home(props) {
         };
 
         window.addEventListener("scroll", myScrollFunc);
-
     }, [])
 
     return (
@@ -60,7 +57,7 @@ function Home(props) {
                     <div className=" container row d-flex justify-content-center">
                         {foods.map((food,index) => 
                             ( <div className="col-md-4" key={food.idMeal+index}>
-                                <FoodItem  id={food.idMeal} title={food.strMeal} img={food.strMealThumb} category={food.strCategory} area={food.strArea} setTheme={setTheme} theme={theme}></FoodItem>
+                                <MealItem  id={food.idMeal} title={food.strMeal} img={food.strMealThumb} category={food.strCategory} area={food.strArea} setTheme={setTheme} theme={theme}></MealItem>
                             </div> )
                         )}
                     </div>
