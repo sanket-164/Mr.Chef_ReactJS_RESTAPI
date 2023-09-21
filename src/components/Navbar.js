@@ -43,7 +43,7 @@ function Navbar(props) {
     <div id="navbar-top-sanket">
       <nav className={`navbar navbar-expand-lg bg-${theme} navbar-${theme}`}>
         <div className="container-fluid container">
-          <Link className="navbar-brand" to="/">
+          <Link className="navbar-brand" to="/home">
             <img
               className="mx-2 mb-1"
               src="https://static.vecteezy.com/system/resources/previews/008/709/513/original/chef-restaurant-logo-illustrations-template-free-vector.jpg"
@@ -67,14 +67,9 @@ function Navbar(props) {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <Link className="nav-link active" aria-current="page" to="/home">
-                  Home
-                </Link>
-              </li>
               <li className="nav-item dropdown">
                 <Link
-                  className="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle active"
                   to="#"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -97,7 +92,7 @@ function Navbar(props) {
               </li>
               <li className="nav-item dropdown">
                 <Link
-                  className="nav-link dropdown-toggle"
+                  className="nav-link dropdown-toggle active"
                   to="/"
                   role="button"
                   data-bs-toggle="dropdown"
@@ -117,6 +112,11 @@ function Navbar(props) {
                     </li>
                   ))}
                 </ul>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" aria-current="page" to="/">
+                  About
+                </Link>
               </li>
             </ul>
             <form className="d-flex">

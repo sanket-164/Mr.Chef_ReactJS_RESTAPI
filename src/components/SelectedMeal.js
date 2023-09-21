@@ -17,7 +17,7 @@ function SelectedFood(props) {
     const url = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${params.id}`;
     const response = await fetch(url);
     const json = await response.json();
-    
+
     if (json.meals === null) {
       setLoading(false);
     } else {
@@ -253,12 +253,12 @@ function SelectedFood(props) {
                 </div>
               </div>
               <div className="card-body">
-                <h4
+                <h2
                   className={`card-title text-${theme === "dark" ? "light" : "dark"
                     }`}
                 >
                   Steps to make {food.strMeal}
-                </h4>
+                </h2>
                 <p
                   className={`card-text text-${theme === "dark" ? "light" : "dark"
                     }`}
@@ -269,21 +269,13 @@ function SelectedFood(props) {
                     )
                   })}
                 </p>
-              </div>
-              <div className="d-flex justify-content-between">
-                <div className="w-100 ms-3">
-                  <a
-                    href={food.strYoutube}
-                    target="_blank"
-                    rel="noreferrer"
-                    className={`btn btn-${theme === "dark" ? "light" : "dark"
-                      } w-100 btn-lg fs-4`}
-                  >
-                    Watch Video
-                  </a>
+                <h2 className={`card-title text-${theme === "dark" ? "light" : "dark" }`}>Recipe Video</h2>
+                <div className="w-100" height="400vw">
+                  {console.log(food.strYoutube.slice(food.strYoutube.indexOf('?v=') + 3))}
+                  <iframe title={food.strMeal} className="w-100" height="400vw" style={{ borderRadius: 20}} src={`https://www.youtube.com/embed/${food.strYoutube.slice(food.strYoutube.indexOf('?v=') + 3)}`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
-                <p className={`btn btn-${theme === "dark" ? "light" : "dark"
-                      } btn-lg fs-4 ms-2 me-3`} onClick={handleShare}><i class="fa-solid fa-share"></i></p>
+                {/* <p className={`btn btn-${theme === "dark" ? "light" : "dark"
+                      } btn-lg fs-4 ms-2 me-3`} onClick={handleShare}><i class="fa-solid fa-share"></i></p> */}
               </div>
             </div>
           </div>
